@@ -1,0 +1,58 @@
+GET http://localhost:8080/customer/find-by-id?id=66d0a439b3fe9e3329ea72fc
+Accept: application/json
+
+###
+POST http://localhost:8080/customer/create
+Content-Type: application/json
+
+{
+  "name": "Eric Mignardi",
+  "job": "Student"
+}
+
+###
+
+POST http://localhost:8080/customer/create
+Content-Type: application/json
+
+{
+  "name": "Norma Mignardi",
+  "job": "Lab Technician"
+}
+
+###
+
+POST http://localhost:8080/customer/create
+Content-Type: application/json
+
+{
+  "name": "John Mignardi",
+  "job": "Salesman"
+}
+
+###
+
+POST http://localhost:8080/order/create
+Content-Type: application/json
+
+{
+  "customerId": "66d0a439b3fe9e3329ea72fc",
+  "total": 50,
+  "discount": 5
+}
+
+###
+
+POST http://localhost:8080/order/create
+Content-Type: application/json
+
+{
+  "customerId": "66d0a0cbe59d4570ec9c0684",
+  "total": 150,
+  "discount": 10
+}
+
+###
+
+GET http://localhost:8080/sales/summary
+Accept: application/json
